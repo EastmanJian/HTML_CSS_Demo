@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<audio id="audio1" controls="controls">
+    <source src="https://ejres-1253687085.cosgz.myqcloud.com/mp3/Dido-Thank%20you.ogg" type="audio/ogg">
+    <source src="https://ejres-1253687085.cosgz.myqcloud.com/mp3/Dido-Thank%20you.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+<button onclick="playPause()">Play/Pause</button>
+<script type="text/javascript">
+    var myAudio=document.getElementById("audio1");
+
+    function playPause()
+    {
+        if (myAudio.paused)
+            myAudio.play();
+        else
+            myAudio.pause();
+    }
+
+</script>
+
+</body>
+</html>
