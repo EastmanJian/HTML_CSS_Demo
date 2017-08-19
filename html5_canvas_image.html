@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="drawImage()">Draw an image</button>
+<br/>
+<canvas id="myCanvas" width="400" height="400"
+        style="border:1px solid #000000;">
+</canvas>
+<script>
+    var img = new Image();
+    img.src = "https://ejres-1253687085.picgz.myqcloud.com/img/chronobiology/chronobiology-circadian-rhythms.jpg";
+
+    function drawImage() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.drawImage(img, 5, 5);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="drawCircleStroke()">Draw a Circle with stroke</button>
+<button onclick="drawCircleFill()">Draw a Circle with fill</button>
+<br/>
+<canvas id="myCanvas" width="200" height="100"
+        style="border:1px solid #000000;">
+</canvas>
+<script>
+    function drawCircleStroke() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(75,50,40,0,2*Math.PI);
+        ctx.stroke();
+    }
+    function drawCircleFill() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle="#FF0000";
+        ctx.beginPath();
+        ctx.arc(130,50,40,0,2*Math.PI);
+        ctx.fill();
+    }
+</script>
+</body>
+</html>

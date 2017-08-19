@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="drawLine()">Draw lines</button>
+<br/>
+<canvas id="myCanvas" width="200" height="100"
+        style="border:1px solid #000000;">
+</canvas>
+<script>
+    function drawLine() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(10, 10);
+        ctx.lineTo(190, 90);
+        ctx.lineTo(30, 95);
+        ctx.stroke();
+    }
+</script>
+</body>
+</html>
