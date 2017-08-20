@@ -7,6 +7,7 @@
 <body>
 <p>Click the button below several times, and then close the page and reopen, continue to click the button.</p>
 <button onclick="clickCount()">Hit me kick me, you can never get me</button>
+<button onclick="resetCount()">Reset</button>
 <div id="resultLocal"></div>
 <br/>
 <div id="resultSession"></div>
@@ -27,6 +28,15 @@
         }
         document.getElementById("resultSession").innerHTML = "You have clicked the button " +
             sessionStorage.clickcount + " time(s) in this session.";
+    }
+
+    function resetCount() {
+        if (localStorage.clickcount1) {
+            localStorage.removeItem("clickcount1");
+        }
+        if (sessionStorage.clickcount) {
+            sessionStorage.removeItem("clickcount");
+        }
     }
 </script>
 </body>
