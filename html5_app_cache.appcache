@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# 2017-08-20 v1.0.0
+html5_app_cache.html
+
+NETWORK:
+html5_geolocation.html
+
+FALLBACK:
+/html/ html5_svg.html
