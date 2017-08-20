@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <style type="text/css">
-        body, html,#baiduMap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+        body, html, #baiduMap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
     </style>
-    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=7VQq7OQ8Rjfwns5HPy1m0xNiivlYCsGu&s=1"></script>
+    <script type="text/javascript"
+            src="https://api.map.baidu.com/api?v=2.0&ak=7VQq7OQ8Rjfwns5HPy1m0xNiivlYCsGu&s=1"></script>
     <!-- Get the AK from http://lbsyun.baidu.com/-->
     <title>Geolocaion Demo</title>
 <body>
-<p id="demo">Click the button to get your geolocation.</p>
-<button onclick="getLocation()">Get geolocation</button>
-<br/>
-<iframe id="googleMap" src=""
-        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<p id="demo">Watch your geolocation.</p>
+<!--iframe id="googleMap" src=""
+        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe-->
 <div id="baiduMap" style="width:668px;height:372px"></div>
+<br/>
+<button onclick="stopWatchLocation()">Stop watching geolocation</button>
 <script>
-    var x = document.getElementById("demo");
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition, showError);
-        }
-        else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition, showError);
+    }
+    else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
     }
 
     function showPosition(position) {
@@ -33,9 +37,9 @@
         document.getElementById("demo").innerHTML = "latitude = " + lat + ", longtitude = " + lon;
 
         // Google Map
-        var map_url = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d234121.60308602257!2d"
-            + lon + "!3d" + lat + "!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1503214140546";
-        document.getElementById("googleMap").src = map_url;
+//        var map_url = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d234121.60308602257!2d"
+//            + lon + "!3d" + lat + "!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1503214140546";
+//        document.getElementById("googleMap").src = map_url;
 
         // 百度地图API功能
         var map = new BMap.Map("baiduMap");    // 创建Map实例
@@ -59,6 +63,15 @@
             case error.UNKNOWN_ERROR:
                 x.innerHTML = "An unknown error occurred."
                 break;
+        }
+    }
+
+    function stopWatchLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition();
+        }
+        else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
         }
     }
 </script>
