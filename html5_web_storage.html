@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Web Storage Demo, localStorage vs sessionStorage</title>
+</head>
+<body>
+<p>Click the button below several times, and then close the page and reopen, continue to click the button.</p>
+<button onclick="clickCount()">Hit me kick me, you can never get me</button>
+<div id="resultLocal"></div>
+<br/>
+<div id="resultSession"></div>
+<script>
+    function clickCount() {
+        if (localStorage.clickcount1) {
+            localStorage.clickcount1 = Number(localStorage.clickcount1) + 1;
+        } else {
+            localStorage.clickcount1 = 1;
+        }
+        document.getElementById("resultLocal").innerHTML = "You have clicked the button " +
+            localStorage.clickcount1 + " time(s).";
+
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("resultSession").innerHTML = "You have clicked the button " +
+            sessionStorage.clickcount + " time(s) in this session.";
+    }
+</script>
+</body>
+</html>
