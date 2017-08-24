@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Form Elements Demo</title>
+</head>
+<body>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get">
+    <h3>datalist</h3>
+    Webpage: <input type="url" list="url_list" name="link" />
+    <datalist id="url_list">
+        <option label="W3School" value="http://www.w3school.com.cn" />
+        <option label="Google" value="http://www.google.com" />
+        <option label="Microsoft" value="http://www.microsoft.com" />
+    </datalist>
+    <br/>
+    Browser: <input list="browsers" name="browser">
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <br/>
+    <h3>keygen</h3>
+    Encryption: <keygen name="security" />
+    <br/>
+    <input type="submit" />
+</form>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    <h3>output</h3>
+    0<input type="range" id="a" value="50">100 +
+    <input type="number" id="b" value="50">=
+    <output name="x" for="a b"></output>
+</form>
+
+</body>
+</html>
