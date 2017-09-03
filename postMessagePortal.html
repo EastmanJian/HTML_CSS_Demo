@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<title>Portal [https://eastmanjian.github.io/HTML_CSS_Demo/postMessagePortal.html]</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    iframe {
+        height: 400px;
+        width: 800px;
+    }
+
+</style>
+<link rel="icon" href="https://eastmanjian.cn/blog/favicon.ico">
+<script>
+    var defaultTitle = "Portal [https://eastmanjian.github.io/HTML_CSS_Demo/postMessagePortal.html]";
+    var notificationTimer = null;
+    var trustedOrigin = "https://eastmanjian.cn";
+    function messageHandler(e) {
+        if (e.origin == trustedOrigin) {
+            notify(e.data);
+        } else {
+// ignore messages from other origins
+        }
+    }
+    function sendString(s) {
+        document.getElementById("widget").contentWindow.postMessage(s, trustedOrigin);
+    }
+    function notify(message) {
+        stopBlinking();
+        blinkTitle(message, defaultTitle);
+    }
+    function stopBlinking() {
+        if (notificationTimer !== null) {
+            clearTimeout(notificationTimer);
+        }
+        document.title = defaultTitle;
+    }
+    function blinkTitle(m1, m2) {
+        document.title = m1;
+        notificationTimer = setTimeout(blinkTitle, 1000, m2, m1)
+    }
+    function sendStatus() {
+        var statusText = document.getElementById("statusText").value;
+        sendString(statusText);
+    }
+    function loadDemo() {
+        document.getElementById("sendButton").addEventListener("click", sendStatus, true);
+        document.getElementById("stopButton").addEventListener("click", stopBlinking, true);
+        sendStatus();
+    }
+    window.addEventListener("load", loadDemo, true);
+    window.addEventListener("message", messageHandler, true);
+
+</script>
+<h1>Cross-Origin Portal</h1>
+<p><b>Origin</b>: https://eastmanjian.github.io</p>
+Status <input type="text" id="statusText" value="Online">
+<button id="sendButton">Change Status</button>
+<p>
+    This uses postMessage to send a status update to the widget iframe contained in the portal
+    page.
+</p>
+<iframe id="widget" src="https://eastmanjian.cn//postMessageWidget.html"></iframe>
+<p>
+    <button id="stopButton">Stop Blinking Title</button>
+</p>
