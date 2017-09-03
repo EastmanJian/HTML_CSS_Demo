@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>autocomplete attribute</h2>
+<p>The form's autocomplete attribute is on, the E-mail's autocomplete attribute, which is off, overrides the form's autocomplete attribute.</p>
+<p>To see the autocomplete effect, submit the form and reload the page again.</p>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get" autocomplete="on">
+    First name: <input type="text" name="fname" /><br />
+    Last name: <input type="text" name="lname" /><br />
+    E-mail: <input type="email" name="email" autocomplete="off" /><br />
+    <input type="submit" />
+</form>
+
+
+<h2>autofocus attribute</h2>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get">
+    User name: <input type="text" name="user_name" autofocus="autofocus" />
+    <input type="submit" />
+</form>
+
+<h2>form attribute</h2>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get" id="user_form1">
+    First name:<input type="text" name="fname" />
+    <input type="submit" />
+</form>
+<p>The field below is out of the form tag, but it's still part of the form.</p>
+Last name: <input type="text" name="lname" form="user_form1" />
+
+<h2>form override attributes</h2>
+<p>form override attributes allow you to override the form elements attribute, which can be different from the form's setting</p>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get" id="user_form2">
+    E-mail: <input type="email" name="userid" /><br />
+    <input type="submit" value="Submit" />
+    <br />
+    <input type="submit" formaction="https://eastmanjian.cn/html5_demo/html5_form_admin_demo.jsp" value="Submit as admin" />
+    <br />
+    <input type="submit" formnovalidate="true" value="Submit without validation" />
+    <br />
+</form>
+
+<h2>width and height attributes of image input type</h2>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get">
+    User name: <input type="text" name="user_name" /><br />
+    <input type="image" src="https://ejres-1253687085.picgz.myqcloud.com/img/submit_button_25393934.jpg" width="228" height="80" />
+</form>
+
+
+<h2>list Attribute</h2>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get">
+    Browser: <input list="browsers">
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <br/>
+    Webpage: <input type="url" list="url_list" name="link" />
+    <datalist id="url_list">
+        <option label="W3School" value="http://www.w3school.com.cn" />
+        <option label="Google" value="http://www.google.com" />
+        <option label="Microsoft" value="http://www.microsoft.com" />
+    </datalist><br/>
+    <input type="submit" />
+</form>
+
+
+<h2>max min step Attributes</h2>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get" oninput="q.value=quan.value">
+    Enter a date before 1980-01-01:
+    <input type="date" name="bday" max="1979-12-31"><br/>
+    Enter a date after 2000-01-01:
+    <input type="date" name="aday" min="2000-01-02"><br/>
+    Quantity (between 1 and 50 step 3):
+    <input type="range" id="quan" name="quantity" min="1" max="50" step="3">
+    <output name="q"></output><br/>
+    <input type="submit" />
+</form>
+
+<h2>multiple Attribute</h2>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get">
+    Select images: <input type="file" name="img" multiple="multiple" />
+    <p>(select multiple files)</p>
+    <input type="submit" />
+</form>
+
+<h2>novalidate Attribute</h2>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get" novalidate="novalidate">
+    E-mail: <input type="email" name="user_email" />
+    <input type="submit" />
+</form>
+
+<h2>pattern Attribute</h2>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get">
+    Country code: <input type="text" name="country_code" pattern="[A-z]{3}"
+                         title="Three letter country code" />
+    <input type="submit" />
+</form>
+
+<h2>placeholder Attribute</h2>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get">
+    <input type="text" name="telephone" placeholder="Telephone Number" />
+    <input type="submit" />
+</form>
+
+<h2>required Attribute</h2>
+<form action="https://eastmanjian.cn/html5_demo/html5_form_demo.jsp" method="get">
+    Name: <input type="text" name="usr_name" required="required" />
+    <input type="submit" />
+</form>
+
+
+</body>
+</html>
