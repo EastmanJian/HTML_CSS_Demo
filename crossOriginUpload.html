@@ -11,6 +11,7 @@
             document.getElementById("support").innerHTML = "Your browser <strong>does not</strong> support cross-origin XMLHttpRequest";
         } else {
             document.getElementById("support").innerHTML = "Your browser <strong>does</strong> support cross-origin XMLHttpRequest";
+            xhr.withCredentials = true;
         }
 
         var targetLocation = "https://eastmanjian.cn/html5_demo/get_post_data.jsp";
