@@ -20,6 +20,10 @@
             document.getElementById("progress").innerHTML = s;
         }
 
+        function setStatus(s) {
+            document.getElementById("status").innerHTML = s;
+        }
+
         document.getElementById("sendButton").addEventListener("click",
             function () {
                 xhr.upload.onprogress = function (e) {
@@ -33,11 +37,11 @@
                 }
 
                 xhr.onload = function (e) {
-                    setProgress("finished");
+                    setStatus("finished");
                 }
 
                 xhr.onerror = function (e) {
-                    setProgress("error");
+                    setStatus("error");
                 }
 
                 xhr.open("POST", targetLocation, true);
@@ -66,6 +70,6 @@
 </script>
 
 <p>
-    <b>Status: </b> <span id="progress">ready</span>
+    <b>Status: </b> <span id="progress">ready</span> <span id="status"></span>
 </p>
 
