@@ -16,6 +16,7 @@
             xmlhttp.onprogress = function (e) {
                 var total = e.total;
                 var loaded = e.loaded;
+                alert("loading...");
                 //if (e.lengthComputable) {
                     document.getElementById('loadProgress').innerHTML = loaded + " of " + total + " loaded.";
                 //}
