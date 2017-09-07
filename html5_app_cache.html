@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript">
+        function loadDemo() {
+            var msg;
+            if (window.applicationCache) {
+                msg = "This browser supports offline applications";
+            } else {
+                msg = "This browser does NOT supports offline applications";
+            }
+            document.getElementById('isBrowserSupportCache').innerHTML = msg;
+
+            log("Initial cache status: " + showCacheStatus(window.applicationCache.status));
+
+            onlineStatusChange(null);
+
+        }
+
+        function onlineStatusChange(e) {
+            if (navigator.onLine) {
+                msg = "Application is online.";
+            } else {
+                msg = "Application is offline.";
+            }
+            document.getElementById('onlineOffline').innerHTML = msg;
+        }
+
+        function updateCache() {
+            try {
+                window.applicationCache.update();
+            } catch (e) {
+                applicationCache.onerror();
+            }
+        }
+
+        window.applicationCache.onerror = function (e) {
+            log("Application cache error");
+        }
+        window.applicationCache.onchecking = function (e) {
+            log("Checking for application update");
+        }
+        window.applicationCache.onnoupdate = function (e) {
+            log("No application update found");
+        }
+        window.applicationCache.onupdateready = function (e) {
+            log("Application update ready");
+        }
+        window.applicationCache.onobsolete = function (e) {
+            log("Application obsolete");
+        }
+        window.applicationCache.ondownloading = function (e) {
+            log("Downloading application update");
+        }
+        window.applicationCache.oncached = function (e) {
+            log("Application cached");
+        }
+
+        log = function () {
+            var p = document.createElement("p");
+            var message = Array.prototype.join.call(arguments, " ");
+            p.innerHTML = message;
+            document.getElementById("info").appendChild(p);
+        }
+
+        showCacheStatus = function (n) {
+            statusMessages = ["Uncached", "Idle", "Checking", "Downloading", "Update Ready", "Obsolete"];
+            return statusMessages[n];
+        }
+
+        window.addEventListener("load", loadDemo, true);
+        window.addEventListener("online", onlineStatusChange, true);
+        window.addEventListener("offline", onlineStatusChange, true);
+    </script>
 </head>
 <body>
 <h1>Demo of HTML5 App Cache</h1>
+<div id="isBrowserSupportCache"></div>
+<div id="onlineOffline"></div>
 <p>Disconnect network and reload this url to see if it's been cached.</p>
+<button onclick="updateCache()">Update App Cache</button>
+<div id="info"></div>
 </body>
 </html>

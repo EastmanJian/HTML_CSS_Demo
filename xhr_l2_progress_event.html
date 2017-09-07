@@ -23,7 +23,7 @@
 
             }
 
-            xmlhttp.onloadend = function () {
+            xmlhttp.onload = function () {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                     txt = "<table border='1'><tr><th>Title</th><th>Artist</th></tr>";
                     x = xmlhttp.responseXML.documentElement.getElementsByTagName("CD");
