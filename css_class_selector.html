@@ -1,0 +1,55 @@
+<html>
+<head>
+    <style>
+        /* class selector */
+        /* the start(*) wildcard any element, it can be omitted. */
+        *.important {
+            color: red;
+            font-weight: bold;
+        }
+
+        .warning {
+            font-style: italic;
+        }
+
+        /* this finds the class list which has both important and warning */
+        .important.warning {
+            background: silver;
+        }
+
+        /* element + class selector  */
+        h1.important {
+            text-decoration: underline;
+            background: lightpink;
+        }
+
+        /* class selector with descendant selector */
+        .fancy td {
+            color: #f60;
+            background: #666;
+        }
+
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h1 class="important">This heading is very important.</h1>
+<p class="important">This paragraph is very important.</p>
+<p>This is paragraph 2.</p>
+<p>This is paragraph 3.</p>
+<p class="important urgent warning">
+    This paragraph shows is very important urgent warning.
+</p>
+<TABLE class="fancy">
+    <TR>
+        <TD>A1</TD>
+        <TD>B1</TD>
+    </TR>
+    <TR>
+        <TD>A2</TD>
+        <TD>B2</TD>
+    </TR>
+</TABLE>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+</body>
+</html>

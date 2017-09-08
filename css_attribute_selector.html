@@ -1,0 +1,119 @@
+<html>
+<head>
+    <style>
+        /* attribute selector */
+        /* the start(*) wildcard any element, it can be omitted. */
+        *[title] {
+            color: red;
+        }
+
+        /* select attribute with specific value */
+        [title=EastmanBlog] {
+            border: 5px solid blue;
+            color: darkblue;
+        }
+
+        /* element selector with attribute selector */
+        planet[moons] {
+            color: red;
+        }
+
+        /* select attribute contain a specific word*/
+        [title~=hello] {
+            color: red;
+            border: 7px groove cadetblue;
+        }
+
+        /* select attribute contain a specific item which is separated by underscore*/
+        [lang|=en] {
+            color: red;
+        }
+
+        /* useful for form elements */
+        input[type="text"] {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+            background-color: yellow;
+            font-family: Verdana, Arial;
+        }
+
+        input[type="button"] {
+            width: 120px;
+            margin-left: 35px;
+            display: block;
+            font-family: Verdana, Arial;
+        }
+
+        /* select multiple attributes */
+        a[href][title][class] {
+            color: red;
+            border: 5px dashed blue;
+        }
+
+        /* select multiple attributes with values */
+        a[title="blog"][href="https://eastmanjian.cn"] {
+            color: blueviolet;
+        }
+
+        /* select attributes with value contains specific string */
+        a[href*="demo"] {
+            border: 5px dotted blue;
+        }
+
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<hr/>
+
+<h3>Stylesheet applies for elements with title attribute:</h3>
+<h2 title="hello world">Hello world</h2>
+<a title="blog" href="https://eastmanjian.cn/blog/index.html">Eastman's Blog</a>
+<hr/>
+
+<h3>Stylesheet does not apply to elements without title attribute</h3>
+<h2>Hello world</h2>
+<a href="https://eastmanjian.cn/blog/index.html">Eastman's Blog</a>
+<hr/>
+
+<h3>element selector with attribute selector</h3>
+<planet>Venus</planet>
+<planet moons="1">Earth</planet>
+<planet moons="2">Mars</planet>
+<hr/>
+
+<h3>Stylesheet applies to elements with 'EastmanBlog' title</h3>
+<a title="EastmanBlog" href="https://eastmanjian.cn/blog/index.html">Eastman's Blog</a>
+<hr/>
+
+<h3>Stylesheet applies to elements with 'en' lang attribute</h3>
+<p lang="en">Hello!</p>
+<p lang="en-us">Hi!</p>
+<p lang="ch/en-us">World!</p>
+<hr/>
+
+<h3>Atribute is useful for form elements without class nor id</h3>
+<form name="input" action="" method="get">
+    <input type="text" name="Name" value="Bill" size="20">
+    <input type="text" name="Name" value="Gates" size="20">
+    <input type="button" value="Example Button">
+</form>
+<hr/>
+
+<h3>select multiple attributes</h3>
+<a title="blog" class="linkage" href="https://eastmanjian.cn/blog/index.html">Eastman's Blog</a>
+<hr/>
+
+<h3>select multiple attributes with values</h3>
+<a title="blog" href="https://eastmanjian.cn">Eastman's Blog</a>
+<hr/>
+
+<h3>select attributes with value contains specific string</h3>
+<a href="https://eastmanjian.cn/blog/demo/">Eastman's Tech Demo</a>
+<hr/>
+
+
+</body>
+</html>

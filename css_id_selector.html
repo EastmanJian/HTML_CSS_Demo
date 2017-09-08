@@ -1,0 +1,48 @@
+<html>
+<head>
+    <style>
+        /* id selector */
+        /* the start(*) means any element, it can be omitted. */
+        *#red {
+            color: red;
+        }
+        #green {
+            color: green;
+        }
+
+        /* element + id selector  */
+        div#textbox {
+            border: 1px dotted #000;
+            padding: 10px;
+        }
+
+        /* id selector with descendant selector */
+        #sidebar p {
+            font-style: italic;
+            text-align: right;
+            margin-top: 0.5em;
+        }
+        #sidebar h2 {
+            font-size: 1em;
+            font-weight: normal;
+            font-style: italic;
+            color: red;
+            margin: 0;
+            line-height: 1.5;
+            text-align: right;
+        }
+
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<p id="red">This paragraph is in red.</p>
+<p id="green">This paragraph's color is green.</p>
+<aside id="sidebar">
+    <h2>sidebar head</h2>
+    <p>This paragraph is inside a sidebar</p>
+</aside>
+<div id="textbox">this is a div text box</div>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+</body>
+</html>
