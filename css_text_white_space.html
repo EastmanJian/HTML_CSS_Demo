@@ -1,0 +1,31 @@
+<html>
+<head>
+    <style type="text/css">
+        p.normal {white-space: normal;}
+        p.pre {white-space: pre;}
+        p.nowrap {white-space: nowrap;}
+        p.prewrap {white-space: pre-wrap;}
+        p.preline {white-space: pre-line;}
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+
+<body>
+<h3>Text - white space handling</h3>
+<p class="normal">This     paragraph has    many
+    spaces           in it. (using <b>normal</b> style for white-space, multiple spaces will be treated as one, with auto wrap
+    feature. Shrink the browser window size to see the effect)</p>
+<p class="pre">This     paragraph has    many
+    spaces           in it. (using <b>pre</b> style for white-space)</p>
+<p class="nowrap">This     paragraph has    many
+    spaces           in it. (using <b>nowrap</b> style for white-space.
+    Shrink the browser window size to see the effect)</p>
+<p class="prewrap">This     paragraph has    a  great    many  s p a c e s   with
+    its textual  content, but their    preservation     will  not prevent
+    line   wrapping or line breaking. (using <b>pre-wrap</b> style for white-space. The browser preserves the multiple spaces and line breaks, also allows auto wrapping)</p>
+<p class="preline">This     paragraph has    a  great    many  s p a c e s   with
+    its textual  content, but their    collapse     will  not prevent
+    line   wrapping or line breaking. (using <b>pre-line</b> style for white-space. The browser treats multiple spaces as one space, preserves line breaks, also allows auto wrapping)</p>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+</body>
+</html>
