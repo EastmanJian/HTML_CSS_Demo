@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <style type="text/css">
+        * {
+            margin:0;
+            padding:0;
+            border:0;
+        }
+
+        #d1 {
+            width:100px;
+            height:100px;
+            margin-top:20px;
+            margin-bottom:20px;
+            background-color:red;
+        }
+
+        #d2 {
+            width:100px;
+            height:100px;
+            margin-top:10px;
+            background-color:blue;
+        }
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>Box Model - margin collapsing</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<div id="d1">
+    d1
+</div>
+<div id="d2">
+    d2
+</div>
+<p>Note that there are 20px between two divs, not 30px (20px + 10px)</p>
+<br/>
+</body>
+</html>
