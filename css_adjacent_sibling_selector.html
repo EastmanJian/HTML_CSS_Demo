@@ -1,0 +1,34 @@
+<html>
+<head>
+    <style>
+        h1 + p {margin-top:50px;}
+        li + li {font-weight:bold;}
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>Adjacent Sibling Selector</h3>
+<h1>This is a heading.</h1>
+<p>This is paragraph is selected by the adjacent sibling selector.</p>
+<p>This is paragraph.</p>
+<p>This is paragraph.</p>
+<p>This is paragraph.</p>
+<p>This is paragraph.</p>
+
+<div>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ul>
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+</div>
+<p>only the second li is selected.</p>
+
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+</body>
+</html>
