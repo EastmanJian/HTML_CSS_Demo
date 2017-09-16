@@ -1,0 +1,20 @@
+<html>
+<head>
+    <style type="text/css">
+        span { display: block }
+        p {display: inline}
+        div.hide {display: none}
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>Classification - display - block and inline switching, using none to hide element</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<span>These span elements are set as blocks.</span>
+<span>There is a line break generated between two span elements.</span>
+<br/>
+<p>These two paragraphs' display property is set as inline.</p>
+<p>They combine into one line. The div element will not be displayed because its display property is none.</p>
+<div class="hide">div element's content will not be displayed.</div>
+</body>
+</html>

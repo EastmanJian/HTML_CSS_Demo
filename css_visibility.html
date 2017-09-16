@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style type="text/css">
+        h1.visible {visibility:visible}
+        h1.invisible {visibility:hidden}
+    </style>
+    <script>
+        function changeVisibility()
+        {
+            var headerVisibility = document.getElementById("scriptCtrl").style.visibility;
+            if (headerVisibility == "" || headerVisibility == "visible") {
+                headerVisibility = "hidden";
+            } else {
+                headerVisibility = "visible";
+            }
+            document.getElementById("scriptCtrl").style.visibility = headerVisibility;
+        }
+    </script>
+    <script src="view_stylesheet.js"></script>
+
+</head>
+<body>
+<h3>Classification - visibility</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<h1 class="visible">This is a visible header</h1>
+<h1 class="invisible">This is an invisible header</h1>
+<input type="button" onclick="changeVisibility()" value="Turn header visibility on/off">
+<h1 id="scriptCtrl">Use script to control this header's visibility.</h1>
+</body>
+</html>
