@@ -1,0 +1,45 @@
+<html>
+<head>
+    <style type="text/css">
+        ul {
+            float:left;
+            width:100%;
+            padding:0;
+            margin:0;
+            list-style-type:none;
+        }
+        a {
+            float:left;
+            width:7em;
+            text-decoration:none;
+            color:white;
+            background-color:lightsteelblue;
+            padding:0.2em 0.6em;
+            margin:1px;
+            border-right:1px solid white;
+        }
+        a:hover {background-color:#ff3300}
+        li {display:inline}
+        p {clear: both;}
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>Position - float - menu example</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<br/>
+<br/>
+<ul>
+    <li><a href="#">Link one</a></li>
+    <li><a href="#">Link two</a></li>
+    <li><a href="#">Link three</a></li>
+    <li><a href="#">Link four</a></li>
+    <li><a href="#">Link five</a></li>
+    <li><a href="#">Link six</a></li>
+</ul>
+<p>
+    In the example above, element ul and a float left. li is inline (without line feed), hence they are in one line. ul element's width is 100%. Each link's width is 7em . background color and border are added for more friendly UI.
+    Try to resize the browser window to see the floating menu position changes.
+</p>
+</body>
+</html>
