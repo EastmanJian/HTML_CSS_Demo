@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style>
+        p::first-line {color: #ff0000;font-variant: small-caps}
+        p::first-letter{color:#ff0000;font-size:xx-large;}
+        h1::before {content: url(./img/eg_cute.gif)}
+        h1::after {content: url(./img/eg_arrow.gif)}
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>Pseudo Elements</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+
+<p>
+    You can use the :first-line pseudo-element to add a special effect to the first line of a text!
+    Resize the browser windows to see the effect.
+    You can use the :first-line pseudo-element to add a special effect to the first line of a text!
+    Resize the browser windows to see the effect.
+    You can use the :first-line pseudo-element to add a special effect to the first line of a text!
+    Resize the browser windows to see the effect.
+</p>
+
+<h1>This is a heading</h1>
+<p>The :before pseudo-element inserts content before an element.</p>
+<h1>This is a heading</h1>
+<p>The :after pseudo-element inserts content after an element.</p>
+
+</body>
+</html>

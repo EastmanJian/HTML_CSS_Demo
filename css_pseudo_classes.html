@@ -1,0 +1,45 @@
+<html>
+<head>
+    <style>
+        p:first-child {font-weight: bold; color: green}
+        li:first-child {text-transform:uppercase; color: green}
+        input:focus {background-color:yellow;}
+        q:lang(no) {quotes: "[" "]"; background-color: lightpink}
+        p > i:first-child {font-weight:bold; color: red}
+        tr:first-child i {color:blue; }
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>Pseudo Classes</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<div>
+    <p>These are the necessary steps:</p>
+    <ul>
+        <li>Insert Key</li>
+        <li>Turn key <strong>clockwise</strong></li>
+        <li>Push accelerator</li>
+    </ul>
+    <p>Do <em>not</em> push the brake at the same time as the accelerator.</p>
+</div>
+
+<form action="form_action.asp" method="get">
+    First name: <input type="text" name="fname" /><br />
+    Last name: <input type="text" name="lname" /><br />
+    <input type="submit" value="Submit" />
+</form>
+
+
+<p>Some texts <q lang="no">quote in a paragraph</q> Some texts.</p>
+
+<p>some <i>text</i>. some <i>text</i>.</p>
+<div>some <i>text</i>. some <i>text</i>.</div>
+<br/>
+
+<table>
+    <tr><td>some <i>text</i>. some <i>text</i>.</td></tr>
+    <tr><td>some <i>text</i>. some <i>text</i>.</td></tr>
+</table>
+
+</body>
+</html>
