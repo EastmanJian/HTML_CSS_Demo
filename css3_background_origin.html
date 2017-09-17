@@ -1,0 +1,37 @@
+<html>
+<head>
+    <style type="text/css">
+        div {
+            border: 15px dashed gray;
+            padding: 35px;
+            background-image: url('./img/bg_flower.gif');
+            background-color: lightgray;
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+
+        #div1 {
+            background-origin: border-box;
+        }
+
+        #div2 {
+            background-origin: content-box;
+        }
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>CSS3 background image origin</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<p>background-origin:border-box:</p>
+<div id="div1">
+    Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+</div>
+
+<p>background-origin:content-box:</p>
+<div id="div2">
+    Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+    Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+</div>
+</body>
+</html>
