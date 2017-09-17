@@ -1,0 +1,48 @@
+<html>
+<head>
+    <style type="text/css">
+        div {
+            width: 300px;
+            padding: 10px 20px;
+        }
+
+        #round {
+            border: 15px solid transparent;
+            -moz-border-image: url(./img/border.png) 30 30 round; /* Old Firefox */
+            -webkit-border-image: url(./img/border.png) 30 30 round; /* Safari and Chrome */
+            -o-border-image: url(./img/border.png) 30 30 round; /* Opera */
+            border-image: url(./img/border.png) 30 30 round;
+        }
+
+        #stretch {
+            border: 15px solid transparent;
+            -moz-border-image: url(./img/border.png) 30 30 stretch; /* Old Firefox */
+            -webkit-border-image: url(./img/border.png) 30 30 stretch; /* Safari and Chrome */
+            -o-border-image: url(./img/border.png) 30 30 stretch; /* Opera */
+            border-image: url(./img/border.png) 30 30 stretch;
+        }
+        #groovy {
+            border: 30px solid transparent;
+            border-image: url(img/border-groovy.png) 108 108 round;
+        }
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>CSS3 - border image</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<br/>
+<br/>
+<div id="round">The image fill the border.</div>
+<br>
+<div id="stretch">The image stretch out the border.</div>
+<p>This is the border image used</p>
+<img src="./img/border.png">
+<br/>
+<br/>
+<div id="groovy">Use The groovy image as the border.</div>
+<p>This is the border image used</p>
+<img src="img/border-groovy.png">
+
+</body>
+</html>
