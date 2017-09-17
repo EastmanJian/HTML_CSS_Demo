@@ -1,0 +1,31 @@
+<html>
+<head>
+    <style type="text/css">
+        div {
+            width: 250px;
+            height: 150px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        div#div1 {
+            opacity: 0.5;
+            position: absolute; top: 5em; left: 1em;
+        }
+
+        div#div2 {
+            opacity: 0.8;
+            position: absolute; top: 5em; left: 1em;
+            transform: translate(30px, 20px);
+        }
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>CSS3 2D translate</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<br/>
+<div id="div1">Original</div>
+<div id="div2">{ transform: translate(x, y) }</div>
+</body>
+</html>
