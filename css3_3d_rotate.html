@@ -1,0 +1,33 @@
+<html>
+<head>
+    <style type="text/css">
+        h1
+        {
+            width:100px;
+            height:75px;
+            background-color:yellow;
+            border:1px solid black;
+        }
+        h1#rotatex
+        {
+            transform:rotateX(120deg);
+            -webkit-transform:rotateX(120deg); /* Safari and Chrome */
+            -moz-transform:rotateX(120deg); /* Firefox */
+        }
+        h1#rotatey
+        {
+            transform:rotateY(130deg);
+            -webkit-transform:rotateY(130deg); /* Safari and Chrome */
+            -moz-transform:rotateY(130deg); /* Firefox */
+        }
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>CSS3 3D rotate</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<h1>3D Rotate</h1>
+<h1 id="rotatex">3D Rotate</h1>
+<h1 id="rotatey">3D Rotate</h1>
+</body>
+</html>
