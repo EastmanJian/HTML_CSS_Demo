@@ -1,0 +1,31 @@
+<html>
+<head>
+    <style type="text/css">
+        div {
+            border: 1px dashed gray;
+            height: 150px;
+            width: 300px;
+            margin: 10px;
+        }
+
+        #grad1 {
+            background: radial-gradient(closest-side, blue,green,yellow,black);
+        }
+
+        #grad2 {
+            background: radial-gradient(farthest-corner, blue,green,yellow,black);
+        }
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>CSS3 radial gradient with different size keywords</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<div id="grad1">
+    CSS3 Radial Gradient - closest-side
+</div>
+<div id="grad2">
+    CSS3 Radial Gradient - farthest-corner
+</div>
+</body>
+</html>
