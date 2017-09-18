@@ -3,7 +3,8 @@
     <style type="text/css">
         /* Example 1: rotate, resize, color etc. transitions */
         #example1 {
-            height: 80px;
+            height: 120px;
+            text-align: center;
         }
 
         .animated_div {
@@ -52,11 +53,11 @@
         #example2 {
             position: relative;
             left: 30%;
-            height: 180px;
+            height: 260px;
             width: 220px;
             margin: 20px;
             padding: 10px;
-            border: 1px solid black;
+            border: 1px dashed gray;
             /* standard, but Chrome does not support
             perspective:100;
             */
@@ -95,124 +96,116 @@
         }
 
         /* Example 3: transition-timing-function */
-        #example3
-        {
-            position:relative;
-            width:530px;
-            height:630px;
-            margin:0 auto 10px;
-            padding:10px;
+        #example3 {
+            position: relative;
+            width: 530px;
+            height: 700px;
+            margin: 0 auto 10px;
+            padding: 10px;
         }
 
-        .childbox
-        {
-            font-size:12px;
-            position:relative;
-            width:60px;
-            height:60px;
-            margin-bottom:10px;
-            background-color:#ccc;
+        .childbox {
+            font-size: 12px;
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            background-color: #ccc;
         }
 
-        .childbox p
-        {
-            text-align:center;
-            padding-top:10px;
+        .childbox p {
+            text-align: center;
+            padding-top: 10px;
         }
 
-        #ease.childbox
-        {
+        #ease.childbox {
             -webkit-transition: all 4s ease;
             -moz-transition: all 4s ease;
             -o-transition: all 4s ease;
             transition: all 4s ease;
-            border:1px solid #ff0000;
+            border: 1px solid #ff0000;
         }
 
-        #ease_in.childbox
-        {
+        #ease_in.childbox {
             -webkit-transition: all 4s ease-in;
             -moz-transition: all 4s ease-in;
             -o-transition: all 4s ease-in;
             transition: all 4s ease-in;
-            border:1px solid #00ffff;
+            border: 1px solid #00ffff;
         }
 
-        #ease_out.childbox
-        {
+        #ease_out.childbox {
             -webkit-transition: all 4s ease-out;
             -moz-transition: all 4s ease-out;
             -o-transition: all 4s ease-out;
             transition: all 4s ease-out;
-            border:1px solid #f5f5f5;
+            border: 1px solid #f5f5f5;
         }
 
-        #ease_in_out.childbox
-        {
+        #ease_in_out.childbox {
             -webkit-transition: all 4s ease-in-out;
             -moz-transition: all 4s ease-in-out;
             -o-transition: all 4s ease-in-out;
             transition: all 4s ease-in-out;
-            border:1px solid #f209f3;
+            border: 1px solid #f209f3;
         }
 
-        #linear.childbox
-        {
+        #linear.childbox {
             -webkit-transition: all 4s linear;
             -moz-transition: all 4s linear;
             -o-transition: all 4s linear;
             transition: all 4s linear;
-            border:1px solid #ddddff;
+            border: 1px solid #ddddff;
         }
 
-        #custom.childbox
-        {
+        #custom.childbox {
             -webkit-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
             -moz-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
             -o-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
             transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
-            border:1px solid #cfdf44;
+            border: 1px solid #cfdf44;
         }
 
-        #negative.childbox
-        {
+        #negative.childbox {
             -webkit-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
             -moz-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
             -o-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
             transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
-            border:1px solid #000;
+            border: 1px solid #000;
         }
 
-        #example3:hover .childbox, #example3.hover_effect .childbox
-        {
-            -webkit-border-radius:30px;
-            -moz-border-radius:30px;
-            border-radius:30px;
+        #example3:hover .childbox, #example3.hover_effect .childbox {
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
             -webkit-transform: rotate(720deg);
             -moz-transform: rotate(720deg);
             -o-transform: rotate(720deg);
             -ms-transform: rotate(720deg);
             transform: rotate(720deg);
-            margin-left:420px;
-            background-color:#fff;
+            margin-left: 420px;
+            background-color: #fff;
         }
 
         /* Example 4: transition-delay */
         .example4 {
             width: 300px;
         }
+
         .example4 div {
             width: 100px;
             margin: 2px 30%;
             padding: 5px;
             color: #ccc;
-            background-color:rgba(225,0,225,0.5);
+            background-color: rgba(225, 0, 225, 0.5);
             text-align: right;
             border-radius: 5px;
         }
+
         .example4:hover div {
             width: 300px;
         }
+
         .example4 div.nodelay {
             -webkit-transition: 2s linear;
             -moz-transition: 2s linear;
@@ -229,7 +222,6 @@
             transition: 2s linear 1s;
         }
 
-
         .example4 div.minusvfive {
             -webkit-transition: 2s linear -5s;
             -moz-transition: 2s linear -5s;
@@ -238,8 +230,41 @@
             transition: 2s linear -5s;
         }
 
+        /* Example 5: java script to control transition */
+        .example5 {
+            height: 160px;
+            margin: auto;
+        }
+
+        .clickme {
+            width: 100px;
+            height: 75px;
+            border: 3px solid gray;
+            background-color: deepskyblue;
+            text-align: center;
+            padding-top: 25px;
+            margin: auto;
+            cursor: pointer;
+            border-radius: 0px;
+            transition: all 1s;
+        }
+
     </style>
     <script src="view_stylesheet.js"></script>
+    <script>
+        function changeShape() {
+            var shapeDivElement = document.getElementById("shapeDiv");
+            console.debug("shapeDivElement.myShape = " + shapeDivElement.myShape);
+            console.debug("shapeDivElement.class = " + shapeDivElement.className);
+            if (shapeDivElement.myShape == "box" || shapeDivElement.myShape == undefined) {
+                shapeDivElement.style.cssText = "border-radius: 50px";
+                shapeDivElement.myShape = "round";
+            } else {
+                shapeDivElement.style.cssText = "border-radius: 0px";
+                shapeDivElement.myShape = "box";
+            }
+        }
+    </script>
 </head>
 <body>
 <h3>CSS3 Transition Effects</h3>
@@ -248,6 +273,7 @@
 <hr>
 
 <div id="example1">
+    <h4>Example 1: rotate, resize, color etc. transitions</h4>
     <div class="animated_div">
         CSS3<br/>
         <span style="font-size:50%;">Transition</span>
@@ -256,27 +282,45 @@
 <hr>
 
 <div id="example2">
+    <h4>Example 2: 3D rotate transition</h4>
     <div id="div3D"><h1>HELLO</h1></div>
 </div>
 <hr>
 
 <div id="example3">
-    ease<div id="ease" class="childbox"><p>CSS3</p></div>
-    ease_in<div id="ease_in" class="childbox"><p>CSS3</p></div>
-    ease_out<div id="ease_out" class="childbox"><p>CSS3</p></div>
-    ease_in_out<div id="ease_in_out" class="childbox"><p>CSS3</p></div>
-    linear<div id="linear" class="childbox"><p>CSS3</p></div>
-    custom<div id="custom" class="childbox"><p>CSS3</p></div>
-    negative<div id="negative" class="childbox"><p>CSS3</p></div>
+    <h4>Example 3: transition-timing-function</h4>
+    ease
+    <div id="ease" class="childbox"><p>CSS3</p></div>
+    ease_in
+    <div id="ease_in" class="childbox"><p>CSS3</p></div>
+    ease_out
+    <div id="ease_out" class="childbox"><p>CSS3</p></div>
+    ease_in_out
+    <div id="ease_in_out" class="childbox"><p>CSS3</p></div>
+    linear
+    <div id="linear" class="childbox"><p>CSS3</p></div>
+    custom
+    <div id="custom" class="childbox"><p>CSS3</p></div>
+    negative
+    <div id="negative" class="childbox"><p>CSS3</p></div>
 </div>
 <hr>
 
 <div class="example4">
-    -5s delay<div class="minusvfive">-5s delay</div>
-    no delay<div class="nodelay">no delay</div>
-    1s delay<div class="onesdelay">1s delay</div>
+    <h4>Example 4: transition-delay</h4>
+    -5s delay
+    <div class="minusvfive">-5s delay</div>
+    no delay
+    <div class="nodelay">no delay</div>
+    1s delay
+    <div class="onesdelay">1s delay</div>
 </div>
 <hr>
 
+<div class="example5">
+    <h4>Example 5: java script to control transition</h4>
+    <div id="shapeDiv" class="clickme" onclick="changeShape()">Click me to change my shape</div>
+</div>
+<hr>
 </body>
 </html>
