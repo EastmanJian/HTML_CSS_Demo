@@ -1,0 +1,49 @@
+<html>
+<head>
+    <style type="text/css">
+        .example5 {
+            height: 160px;
+            width: 300px;
+            margin: auto;
+        }
+
+        .clickme {
+            width: 100px;
+            height: 75px;
+            border: 3px solid gray;
+            background-color: deepskyblue;
+            text-align: center;
+            padding-top: 25px;
+            margin: auto;
+            cursor: pointer;
+            border-radius: 0px;
+            transition: all 1s;
+        }
+
+    </style>
+    <script src="view_stylesheet.js"></script>
+    <script>
+        function changeShape() {
+            var shapeDivElement = document.getElementById("shapeDiv");
+            console.debug("shapeDivElement.myShape = " + shapeDivElement.myShape);
+            console.debug("shapeDivElement.class = " + shapeDivElement.className);
+            if (shapeDivElement.myShape == "box" || shapeDivElement.myShape == undefined) {
+                shapeDivElement.style.cssText = "border-radius: 50px";
+                shapeDivElement.myShape = "round";
+            } else {
+                shapeDivElement.style.cssText = "border-radius: 0px";
+                shapeDivElement.myShape = "box";
+            }
+        }
+    </script>
+</head>
+<body>
+<h3>CSS3 Transition Effects - script to control</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+
+<div class="example5">
+    <div id="shapeDiv" class="clickme" onclick="changeShape()">Click me to change my shape</div>
+</div>
+
+</body>
+</html>

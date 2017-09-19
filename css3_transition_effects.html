@@ -4,6 +4,8 @@
         /* Example 1: rotate, resize, color etc. transitions */
         #example1 {
             height: 120px;
+            width: 400px;
+            margin: auto;
             text-align: center;
         }
 
@@ -12,12 +14,10 @@
             height: 40px;
             background: #92B901;
             color: #ffffff;
-            position: absolute;
             font-weight: bold;
             font-size: 15px;
             padding: 10px;
-            float: top;
-            margin: 0% 40%;
+            margin: auto;
             /* for old version browsers
             -webkit-transition: -webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
             -webkit-border-radius: 5px;
@@ -52,10 +52,9 @@
         /* Example 2: 3D rotate transition */
         #example2 {
             position: relative;
-            left: 30%;
             height: 260px;
             width: 220px;
-            margin: 20px;
+            margin: auto;
             padding: 10px;
             border: 1px dashed gray;
             /* standard, but Chrome does not support
@@ -190,11 +189,11 @@
         /* Example 4: transition-delay */
         .example4 {
             width: 300px;
+            margin: auto;
         }
 
         .example4 div {
             width: 100px;
-            margin: 2px 30%;
             padding: 5px;
             color: #ccc;
             background-color: rgba(225, 0, 225, 0.5);
@@ -228,25 +227,6 @@
             -o-transition: 2s linear -5s;
             -ms-transition: 2s linear -5s;
             transition: 2s linear -5s;
-        }
-
-        /* Example 5: java script to control transition */
-        .example5 {
-            height: 160px;
-            margin: auto;
-        }
-
-        .clickme {
-            width: 100px;
-            height: 75px;
-            border: 3px solid gray;
-            background-color: deepskyblue;
-            text-align: center;
-            padding-top: 25px;
-            margin: auto;
-            cursor: pointer;
-            border-radius: 0px;
-            transition: all 1s;
         }
 
     </style>
@@ -317,10 +297,5 @@
 </div>
 <hr>
 
-<div class="example5">
-    <h4>Example 5: java script to control transition</h4>
-    <div id="shapeDiv" class="clickme" onclick="changeShape()">Click me to change my shape</div>
-</div>
-<hr>
 </body>
 </html>

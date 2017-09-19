@@ -1,0 +1,41 @@
+<html>
+<head>
+    <style type="text/css">
+        .example6 {
+            height: 160px;
+            width: 300px;
+            margin: auto;
+        }
+
+        .options {
+            width: 80px;
+            height: 20px;
+            border: 3px solid gray;
+            background-color: lightgreen;
+            text-align: center;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            float: left;
+            transition: box-shadow 1s;
+        }
+
+        .options:hover {
+            box-shadow: 0px 0px 3px 3px red;
+        }
+
+
+    </style>
+    <script src="view_stylesheet.js"></script>
+</head>
+<body>
+<h3>CSS3 Transition Effects - Navigation - hover with shadow</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+
+<div class="example6">
+    <div class="options">One</div>
+    <div class="options">Two</div>
+    <div class="options">Three</div>
+</div>
+</body>
+</html>
