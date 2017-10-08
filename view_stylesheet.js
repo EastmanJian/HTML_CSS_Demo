@@ -7,7 +7,7 @@ function showStyle(n) {
     document.body.appendChild(blackdiv);
     div = document.createElement("DIV");
     div.setAttribute("id", "stylediv");
-    div.setAttribute("style", "background-color:#ffffff;padding-left:5px;position:absolute;width:auto;height:auto;top:100px;bottom:50px;left:200px;right:200px;overflow:auto;font-family: monospace; white-space: pre;line-height:16px;");
+    div.setAttribute("style", "background-color:#ffffff;padding-left:5px;position:absolute;width:auto;height:auto;top:100px;bottom:50px;left:120px;right:120px;overflow:auto;font-family: monospace; white-space: pre;line-height:16px;");
     text = document.createTextNode(document.getElementsByTagName("STYLE")[n].innerHTML);
     div.appendChild(text);
     document.body.appendChild(div);
