@@ -15,7 +15,7 @@
             if(typeof(w) !== "undefined") {
                 w.terminate();
             }
-            w = new Worker("html5_web_worker.js");
+            w = new Worker("https://eastmanjian.github.io/HTML_CSS_Demo/html5_web_worker.js");
             w.onmessage = function(event) {
                 document.getElementById("result").innerHTML = event.data;
             };
