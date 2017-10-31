@@ -1,0 +1,14 @@
+article a {
+  color: blue;
+  &:hover { color: red }
+}
+
+#content aside {
+  color: red;
+  body.ie & { color: green }
+}
+
+#main {
+  color: black;
+  &-sidebar { border: 1px solid; }
+}
