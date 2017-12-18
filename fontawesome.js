@@ -811,7 +811,9 @@ function generateFontAwesomeList() {
     var content = document.querySelector("#showIcons");
     var html = "";
     for (var i=0; i<faList.length; i++) {
-        html += '<span><h1>' + faList[i] + '</h1>&nbsp;&nbsp;&nbsp;<i class="fa ' + faList[i] + ' fa-lg" aria-hidden="true"></i>';
+        html += '<span><h1>' + faList[i] + '</h1>'
+        html += '&nbsp;&nbsp;&nbsp;<i class="fa ' + faList[i] + ' fa-l" aria-hidden="true"></i>';
+        html += '&nbsp;&nbsp;&nbsp;<i class="fa ' + faList[i] + ' fa-lg" aria-hidden="true"></i>';
         html += '&nbsp;&nbsp;&nbsp;<i class="fa ' + faList[i] + ' fa-2x" aria-hidden="true"></i>';
         html += '&nbsp;&nbsp;&nbsp;<i class="fa ' + faList[i] + ' fa-3x" aria-hidden="true"></i>';
         html += '&nbsp;&nbsp;&nbsp;<i class="fa ' + faList[i] + ' fa-4x" aria-hidden="true"></i>';
