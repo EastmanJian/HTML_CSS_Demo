@@ -1,0 +1,31 @@
+<html>
+<head>
+    <style type="text/css">
+        input {
+            height: 2em;
+            border-radius: 10px;
+            border: solid 1px gray;
+        }
+
+        .focus-shadow {
+            outline: none; /*disable the focus outline which is not rounded corner*/
+        }
+
+        .focus-shadow:focus {
+            box-shadow: 0 0 0px 2px lightskyblue; /* use shadow to show the rounded corner effect instead of outline*/
+        }
+    </style>
+    <script src="https://eastmanjian.github.io/HTML_CSS_Demo/view_stylesheet.js"></script>
+</head>
+<body>
+<h3>Focus on rounded corner element</h3>
+<a href="#" onclick="showStyle(0);return false">View Stylesheet</a>
+<br/>
+<br/>
+<input type="text" name="input1" class="focus-outline" placeholder="focus with outline effect"/>
+<br/>
+<br/>
+<input type="text" name="input2" class="focus-shadow" placeholder="focus with shadow effect"/>
+
+</body>
+</html>
